@@ -36,8 +36,10 @@ window.addEventListener("DOMContentLoaded", () => {
     mesh.rotation.x += 0.05;
     mesh.rotation.y += 0.05;
 
-    // 描画
-    renderer.render(scene, camera);
+    renderer.setAnimationLoop(() => {
+      // 描画
+      renderer.render(scene, camera);
+    })
   };
   tick();
 
