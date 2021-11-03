@@ -31,12 +31,10 @@ window.addEventListener("DOMContentLoaded", () => {
   scene.add(light);
 
   const tick = (): void => {
-    requestAnimationFrame(tick);
-
-    mesh.rotation.x += 0.05;
-    mesh.rotation.y += 0.05;
-
+    requestAnimationFrame(tick)
     renderer.setAnimationLoop(() => {
+      mesh.rotation.x += 0.05;
+      mesh.rotation.y += 0.05;
       // 描画
       renderer.render(scene, camera);
     })
